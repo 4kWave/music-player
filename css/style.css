@@ -1,0 +1,57 @@
+/*global Settings*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+body{background-color:white;}
+button{background-color:transparent;}
+
+/*responsive*/
+
+/*Main Container*/
+.main-container{
+	margin-top:35px;
+}
+/*Music Text*/
+.music-name{
+	text-align:center;
+	font-family: 'Roboto', sans-serif;
+	color:black;
+}
+
+/*Music Image*/
+.music-image{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center
+}
+
+/*Music Player*/
+.music-player{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center
+}
+.button{
+	margin-left:20px;
+}
+.button-1 img{
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+	width:70px;
+}
+.button-2 img{
+	width:60px;
+}
+.button-3 img{
+	width:70px;
+}
+
+
+
+
+
+
+
+

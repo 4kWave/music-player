@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Music Player</title>
+</head>
+<body>
+	<audio src="audio/ab.mp3"></audio>
+	<div class="main-container">
+		<div class="music-image">
+			<img src="images/albumPhoto.jpg" alt="album-photo">
+		</div>
+		<div class="music-name">
+			<h1>Angel Beats - My Soul, Your Beats!</h1>
+		</div>
+		<div class="music-player">
+			<div class="player-buttons">
+				<button class="button button-1"><img src="images/playIcon.png" alt="play"></button>
+				<button class="button button-2" onclick='playMusic()'><img src="images/pauseIcon.png" alt="play"></button>
+				<button class="button button-3"><img src="images/playIcon.png" alt="play"></button>
+			</div>
+		</div>
+	</div>
+	<script>
+		function playMusic(){
+			const audio = document.querySelector('audio');
+			audio.play();
+			audio.volume = 0.2;
+		}
+	</script>
+	
+</body>
+</html>
