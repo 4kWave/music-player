@@ -8,60 +8,28 @@
 </head>
 <body>
 	<audio src="audio/ab.mp3"></audio>
+	<!--Music photos-->
 	<div class="main-container">
-		<div class="music-image">
-			<img src="images/albumPhoto.jpg" alt="album-photo">
-		</div>
+		<div class="images music-image-preview"><img src="images/albumPhotoLeft.jpg" alt=""></div>
+		<div class="images music-image"><img src="images/albumPhoto.jpg" alt="album-photo"></div>
+		<div class="images music-image-preview"><img src="images/albumPhotoRight.jpg" alt=""></div>
+	</div>
+	<!--Music Information-->
 		<div class="music-name">
 			<h1>Angel Beats - My Soul, Your Beats!</h1>
 		</div>
-		<div class="music-player">
-			<div class="player-buttons">
-				<button class="button button-1" onclick="backMusic()"><img src="images/playIcon.png" alt="play"></button><!--
-				--><button class="button button-less" onclick="downMusic()"><img src="images/lessIcon.png" alt="play"></button><!--
-				--><button class="button button-play" id="btn" onclick="playAudio()"><img src="images/pauseIcon.png" alt="play"></button><!--
-				--><button class="button button-plus" onclick="upMusic()"><img src="images/plusIcon.png" alt="play"></button><!--
-				--><button class="button button-3" onclick="backMusic()"><img src="images/playIcon.png" alt="play"></button>
-			</div>
+	<!--Music Player-->
+	<div class="music-player">
+		<div class="player-buttons">
+			<button class="button button-1" onclick="backMusic()"><img src="images/playIcon.png" alt="play"></button><!--
+			--><button class="button button-less" onclick="downMusic()"><img src="images/lessIcon.png" alt="play"></button><!--
+			--><button class="button button-play" id="btn" onclick="playAudio()"><img src="images/pauseIcon.png" alt="play"></button><!--
+			--><button class="button button-plus" onclick="upMusic()"><img src="images/plusIcon.png" alt="play"></button><!--
+			--><button class="button button-3" onclick="backMusic()"><img src="images/playIcon.png" alt="play"></button>
 		</div>
 	</div>
-	<script>
-		//Variables
-		const audio = document.querySelector('audio');
-		audio.volume = 0.2;
-		
-		//Keyboard Functions
-		document.addEventListener('keyup',function(){
-			if(event.keyCode==38){
-				audio.volume += 0.1;
-			}
-		})		
-		document.addEventListener('keyup',function(){
-			if(event.keyCode==40){
-				audio.volume -= 0.1;
-			}
-		})
-		document.addEventListener('keyup',function(){
-			if(event.keyCode==32){
-				playAudio();
-			}
-		})
-		//Play the song
-		function playAudio(){
-			if(audio.paused){
-				audio.play();
-			}else{
-				audio.pause();
-			}
-		}
-		
-		//Button Functions
-		function downMusic(){audio.volume -= 0.1;}
-		function upMusic(){audio.volume += 0.1;}
-		function backMusic(){audio.pause()}
-		function nextMusic(){}
-		
-	</script>
+	<script src="script.js"></script>
 	
 </body>
 </html>
+
