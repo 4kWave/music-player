@@ -1,14 +1,12 @@
 /*global Settings*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
-body{background-color:white;}
+body{background-image: linear-gradient( 178.2deg,  rgba(118,8,23,1) 10.9%, rgba(158,12,33,1) 62.6% );}
 button{background-color:transparent;}
 
 /*responsive*/
 
 /*Main Container*/
-.main-container{
-	margin-top:35px;
-}
+.main-container{margin-top:35px;}
 /*Music Text*/
 .music-name{
 	text-align:center;
@@ -31,27 +29,25 @@ button{background-color:transparent;}
 	justify-content: center;
 	align-items: center
 }
-.button{
-	margin-left:20px;
-}
+.button{cursor:pointer;margin-right:10px;}
 .button-1 img{
     -moz-transform: scaleX(-1);
     -o-transform: scaleX(-1);
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
-	width:70px;
-}
-.button-2 img{
 	width:60px;
+	padding-bottom:5px;
 }
-.button-3 img{
-	width:70px;
+.button-play img{width:50px;padding-bottom:8px;}
+.button-3 img{width:60px;padding-bottom:5px;}
+.button-plus img{
+	width:40px;
+	padding-bottom:15px;
+	margin-left:10px;
+	margin-right:5px;
 }
-
-
-
-
-
-
-
-
+.button-less img{
+	width:60px;
+	padding-bottom:5px;
+	margin-right:5px;
+}
