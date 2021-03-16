@@ -17,18 +17,50 @@
 		</div>
 		<div class="music-player">
 			<div class="player-buttons">
-				<button class="button button-1"><img src="images/playIcon.png" alt="play"></button>
-				<button class="button button-2" onclick='playMusic()'><img src="images/pauseIcon.png" alt="play"></button>
-				<button class="button button-3"><img src="images/playIcon.png" alt="play"></button>
+				<button class="button button-1" onclick="backMusic()"><img src="images/playIcon.png" alt="play"></button><!--
+				--><button class="button button-less" onclick="downMusic()"><img src="images/lessIcon.png" alt="play"></button><!--
+				--><button class="button button-play" id="btn" onclick="playAudio()"><img src="images/pauseIcon.png" alt="play"></button><!--
+				--><button class="button button-plus" onclick="upMusic()"><img src="images/plusion.png" alt="play"></button><!--
+				--><button class="button button-3" onclick="backMusic()"><img src="images/playIcon.png" alt="play"></button>
 			</div>
 		</div>
 	</div>
 	<script>
-		function playMusic(){
-			const audio = document.querySelector('audio');
-			audio.play();
-			audio.volume = 0.2;
+		//Variables
+		const audio = document.querySelector('audio');
+		audio.volume = 0.2;
+		
+		//Keyboard Functions
+		document.addEventListener('keyup',function(){
+			if(event.keyCode==38){
+				audio.volume += 0.1;
+			}
+		})		
+		document.addEventListener('keyup',function(){
+			if(event.keyCode==40){
+				audio.volume -= 0.1;
+			}
+		})
+		document.addEventListener('keyup',function(){
+			if(event.keyCode==32){
+				playAudio();
+			}
+		})
+		//Play the song
+		function playAudio(){
+			if(audio.paused){
+				audio.play();
+			}else{
+				audio.pause();
+			}
 		}
+		
+		//Button Functions
+		function downMusic(){audio.volume -= 0.1;}
+		function upMusic(){audio.volume += 0.1;}
+		function backMusic(){audio.pause()}
+		function nextMusic(){}
+		
 	</script>
 	
 </body>
