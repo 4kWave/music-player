@@ -1,27 +1,20 @@
 /*global Settings*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
-body{background-image: linear-gradient( 178.2deg,  rgba(118,8,23,1) 10.9%, rgba(158,12,33,1) 62.6% );}
+body{background-color:#f5f5f5;}
 button{background-color:transparent;}
 
-/*responsive*/
-
 /*Main Container*/
-.main-container{margin-top:35px;}
-/*Music Text*/
-.music-name{
-	text-align:center;
-	font-family: 'Roboto', sans-serif;
-	color:black;
-}
-
-/*Music Image*/
-.music-image{
+.main-container{
+	margin-top:35px;
 	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center
+	flex-direction:row;
+	flex-wrap:nowrap;
+	justify-content:center;
 }
-
+.music-image img{width:300px;}
+.music-image-preview img{width:200px;opacity:50%;margin-top:50px;}
+/*Music Text*/
+.music-name{text-align:center;font-family: 'Roboto', sans-serif;color:black;}
 /*Music Player*/
 .music-player{
 	display: flex;
@@ -40,14 +33,5 @@ button{background-color:transparent;}
 }
 .button-play img{width:50px;padding-bottom:8px;}
 .button-3 img{width:60px;padding-bottom:5px;}
-.button-plus img{
-	width:40px;
-	padding-bottom:15px;
-	margin-left:10px;
-	margin-right:5px;
-}
-.button-less img{
-	width:60px;
-	padding-bottom:5px;
-	margin-right:5px;
-}
+.button-plus img{width:40px;padding-bottom:15px;margin-left:10px;margin-right:5px;}
+.button-less img{width:60px;padding-bottom:5px;margin-right:5px;}
