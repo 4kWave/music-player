@@ -42,29 +42,29 @@ button{background-color:transparent;}
 }
 input[type=range]::-webkit-slider-thumb{
 	cursor:pointer;
-	border-radius:50%;
+	border-radius:5px;
 }
 input[type=range]::-moz-range-thumb{
 	cursor:pointer;
-	border-radius:50%;
+	border-radius:5px;
 }
 input[type=range]::-ms-thumb{
 	cursor:pointer;
-	border-radius:50%;
+	border-radius:5px;
 }
 input[type=range]::-webkit-slider-runnable-track {
 	width: 200px;
 	height: 15px;
 	cursor: pointer;
 	background:black;
-	border-radius:50%;
+	border-radius:5px;
 }
 input[type=range]::-moz-range-track {
 	width: 200px;
 	height: 15px;
 	cursor: pointer;
 	background:black;
-	border-radius:10px;
+	border-radius:5px;
 }
 
 input[type=range]::-ms-track {
@@ -72,5 +72,5 @@ input[type=range]::-ms-track {
 	height: 15px;
 	cursor: pointer;
 	background:black;
-	border-radius:10px;
+	border-radius:5px;
 }
