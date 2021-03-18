@@ -1,30 +1,32 @@
 //Variabels
 let current_song_index;
-const play_btn = document.getElementById('play-button');
+let currentTrackNumber;
 const audio_player = document.getElementById('music-player');
 const songArtist = document.getElementById('music-artist');
 const songName = document.getElementById('music-name');
 const songImage = document.getElementById('current-image');
 const selectedFile = document.getElementById('song-file-box');
+const currentTrack = document.getElementById('music-track');
+
 //Song List
 let songs = [
 	{
 		artist: 'Elfen Lied',
 		title: 'Lilium',
 		songPath: 'audio/elfenLied.mp3',
-		imgPath: 'images/albumPhotoLeft.jpg'
+		imgPath: 'images/image2.jpg'
 	},
 	{
 		artist:'Angel Beats',
 		title: 'My Soul, Your Beats!',
 		songPath: 'audio/ab.mp3',
-		imgPath: 'images/albumPhoto.jpg'
+		imgPath: 'images/image1.jpg'
 	},
 	{
-		artist:'Wagakki Band',
-		title: 'Homura',
-		songPath: 'audio/homura.mp3',
-		imgPath: 'images/albumPhotoRight.jpg'
+		artist:'Touhou Project',
+		title: 'Ripple Of Reflections',
+		songPath: 'audio/ror.mp3',
+		imgPath: 'images/image3.png'
 	}
 	
 ]
@@ -35,14 +37,20 @@ initPlayer();
 
 function initPlayer(){
 	current_song_index = 1;
+	currentTrackNumber = 2;
 	playMusic();
 }
 function playMusic(){
 	let song = songs[current_song_index];
+	if(current_song_index<0){
+		current_song_index++;
+		currentTrackNumber++;
+	}
 	audio_player.src = song.songPath;
 	songArtist.innerHTML = songs[current_song_index].artist;
 	songName.innerHTML = songs[current_song_index].title;
 	songImage.src = songs[current_song_index].imgPath;
+	currentTrack.innerHTML = "Track: " + currentTrackNumber;
 }
 function toggleMusic(){
 	if(audio_player.paused){
@@ -52,9 +60,11 @@ function toggleMusic(){
 		audio_player.pause();
 	}
 }
+
 function changeMusicNext(i = true){
 	if(i=true){
 		current_song_index++;
+		currentTrackNumber++;
 		playMusic();
 		toggleMusic();
 	}
@@ -62,6 +72,7 @@ function changeMusicNext(i = true){
 function changeMusicBack(i=true){
 	if(i=true){
 		current_song_index--;
+		currentTrackNumber--;
 		playMusic();
 		toggleMusic();
 	}
