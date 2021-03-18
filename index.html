@@ -7,29 +7,35 @@
 	<title>Music Player</title>
 </head>
 <body>
-	<audio src="audio/ab.mp3"></audio>
+	<audio src="#" id="music-player"></audio>
+	<audio src="audio/elfenLied.mp3" id="elfen-lied"></audio>
+	<audio src="audio/homura.mp3" id="homura"></audio>
 	<!--Music photos-->
 	<div class="main-container">
-		<div class="images music-image-preview"><img src="images/albumPhotoLeft.jpg" alt=""></div>
-		<div class="images music-image"><img src="images/albumPhoto.jpg" alt="album-photo"></div>
-		<div class="images music-image-preview"><img src="images/albumPhotoRight.jpg" alt=""></div>
+		<!--<div class="images music-image-preview" id="photo-first"><img src="images/albumPhotoLeft.jpg" alt="" id="image-2"></div>-->
+		<div class="images music-image"><img src="#" alt="album-photo"  id="current-image"></div>
+		<!--<div class="images music-image-preview" id="photo-third"><img src="images/albumPhotoRight.jpg" id="image-3"></div>-->
 	</div>
 	<!--Music Information-->
 		<div class="music-name">
-			<h1>Angel Beats - My Soul, Your Beats!</h1>
+			<h1 class="music-name-info" id="music-artist"></h1>
+			<h1 class="music-name-info" id="music-name"></h1>
 		</div>
 	<!--Music Player-->
 	<div class="music-player">
 		<div class="player-buttons">
-			<button class="button button-1" onclick="backMusic()"><img src="images/playIcon.png" alt="play"></button><!--
-			--><button class="button button-less" onclick="downMusic()"><img src="images/lessIcon.png" alt="play"></button><!--
-			--><button class="button button-play" id="btn" onclick="playAudio()"><img src="images/pauseIcon.png" alt="play"></button><!--
-			--><button class="button button-plus" onclick="upMusic()"><img src="images/plusIcon.png" alt="play"></button><!--
-			--><button class="button button-3" onclick="backMusic()"><img src="images/playIcon.png" alt="play"></button>
+			<button class="button button-1" onclick="changeMusicBack()"><img src="images/playIcon.png" alt="play"></button><!--
+			--><button class="button button-less" onclick="downVolume()"><img src="images/lessIcon.png" alt="play"></button><!--
+			--><button class="button button-play" onclick="toggleMusic()"><img src="images/pauseIcon.png" alt="play"></button><!--
+			--><button class="button button-plus" onclick="upVolume()"><img src="images/plusIcon.png" alt="play"></button><!--
+			--><button class="button button-3" onclick="changeMusicNext()"><img src="images/playIcon.png" alt="play"></button><!--
+			--><br><!--
+			--><input type="range" id="ranger" class="ranger-class" onchange="changeCurrentTime()"><!--
+			--><br><!--		
+			--><input type="file" id="fileBox" onclick="addArray()">
 		</div>
 	</div>
 	<script src="script.js"></script>
 	
 </body>
 </html>
-
