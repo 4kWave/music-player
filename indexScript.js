@@ -1,12 +1,11 @@
 //Variabels
 let current_song_index;
-let next_song_index;
 const play_btn = document.getElementById('play-button');
 const audio_player = document.getElementById('music-player');
 const songArtist = document.getElementById('music-artist');
 const songName = document.getElementById('music-name');
 const songImage = document.getElementById('current-image');
-
+const selectedFile = document.getElementById('song-file-box');
 //Song List
 let songs = [
 	{
@@ -27,6 +26,7 @@ let songs = [
 		songPath: 'audio/homura.mp3',
 		imgPath: 'images/albumPhotoRight.jpg'
 	}
+	
 ]
 
 //Functions
@@ -104,3 +104,9 @@ document.addEventListener('keyup',function(){
 	if(event.keyCode==39)
 		changeMusicNext()
 })
+
+selectedFile.onchange = function(){
+    var files = this.files;
+    var file = URL.createObjectURL(files[0]); 
+	songs.push({songPath:file})
+};
