@@ -8,18 +8,15 @@
 </head>
 <body>
 	<audio src="#" id="music-player"></audio>
-	<audio src="audio/elfenLied.mp3" id="elfen-lied"></audio>
-	<audio src="audio/homura.mp3" id="homura"></audio>
 	<!--Music photos-->
 	<div class="main-container">
-		<!--<div class="images music-image-preview" id="photo-first"><img src="images/albumPhotoLeft.jpg" alt="" id="image-2"></div>-->
 		<div class="images music-image"><img src="#" alt="album-photo"  id="current-image"></div>
-		<!--<div class="images music-image-preview" id="photo-third"><img src="images/albumPhotoRight.jpg" id="image-3"></div>-->
 	</div>
 	<!--Music Information-->
 		<div class="music-name">
 			<h1 class="music-name-info" id="music-artist"></h1>
 			<h1 class="music-name-info" id="music-name"></h1>
+			<h1 class="music-name-info" id="music-track"></h1>
 		</div>
 	<!--Music Player-->
 	<div class="music-player">
@@ -31,7 +28,7 @@
 			--><button class="button button-3" onclick="changeMusicNext()"><img src="images/playIcon.png" alt="play"></button><!--
 			--><br><!--
 			--><input type="range" id="ranger" class="ranger-class" onchange="changeCurrentTime()"><!--
-			--><br><!--		
+			--><br><!--
 			--><input type="file" id="song-file-box">
 		</div>
 	</div>
